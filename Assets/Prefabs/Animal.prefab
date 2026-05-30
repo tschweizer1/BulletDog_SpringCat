@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6702306036937249777}
   - component: {fileID: 1403442978114612986}
   - component: {fileID: -99882303268076555}
+  - component: {fileID: 5773571288459598711}
   m_Layer: 0
   m_Name: Animal
   m_TagString: Player
@@ -220,3 +221,15 @@ MonoBehaviour:
   - {fileID: 2910025751335689831, guid: 264e886c0f53861448b57df3e5225e98, type: 3}
   - {fileID: 2583336555041253547, guid: 59bea5fc980269941b8b676b52e04fdf, type: 3}
   - {fileID: 771163349009901452, guid: fd3495066cf9f6441a66a6bf727b6767, type: 3}
+--- !u!114 &5773571288459598711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6499710411301384688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4269a3fa6e674924e971e885d9655186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerJump

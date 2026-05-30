@@ -1,16 +1,10 @@
 using UnityEngine;
 
-public class GameParameters : MonoBehaviour
+public static class GameParameters
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //Player Movement Parameters
+    public static float accelerationRate = 0.05f;
+    public static float decelerationRate = 0.2f;
+    public static float maxSpeed = 8.0f;
+    public static float jumpForce = 6.0f;
 }

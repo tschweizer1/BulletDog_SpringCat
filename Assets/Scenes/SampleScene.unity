@@ -857,6 +857,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6906870165793238309, guid: 882dcbb531621234e8e78a5a5b540a35, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8332920673590622869, guid: 882dcbb531621234e8e78a5a5b540a35, type: 3}
       propertyPath: m_Name
       value: Dog
