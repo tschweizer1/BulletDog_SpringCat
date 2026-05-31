@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private PlayerState playerState;
     private float move;
     public float currentSpeed;
     private Rigidbody2D rigidBody;
@@ -14,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
+        playerState = GetComponent<PlayerState>();
         rigidBody = GetComponent<Rigidbody2D>();
         playerInput = GetComponent<PlayerInput>();
         MoveInput = playerInput.actions["Move"];
@@ -27,6 +29,16 @@ public class PlayerMovement : MonoBehaviour
     //if movement speed is + the character moves right, if - they move left
     void FixedUpdate()
     {
+        //no movement during an ability or swap
+        if (playerState.currentState() == global::playerState.Swapping)
+        {
+            return;
+        }
+
+        if (playerState.currentState() == global::playerState.Ability)
+        {
+            movement.x = 0.0f;
+        }
         
         if (movement.x != 0.0f)
         {

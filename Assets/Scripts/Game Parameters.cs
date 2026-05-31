@@ -7,4 +7,8 @@ public static class GameParameters
     public static float decelerationRate = 0.2f;
     public static float maxSpeed = 8.0f;
     public static float jumpForce = 6.0f;
+    
+    
+    //Character Ability Parameters
+    public static float dashForce = 50.0f;
 }
