@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BulletDogDash : MonoBehaviour
 {
+    private PlayerFacingDirection direction;
     private PlayerState playerState;
     private Rigidbody2D rigidBody;
     private bool abilityOnCooldown;
@@ -12,6 +13,7 @@ public class BulletDogDash : MonoBehaviour
     {
         playerState = GetComponent<PlayerState>();
         rigidBody =  GetComponent<Rigidbody2D>();
+        direction = GetComponent<PlayerFacingDirection>();
         abilityOnCooldown = false;
     }
 
@@ -25,7 +27,15 @@ public class BulletDogDash : MonoBehaviour
         playerState.changeState(global::playerState.Ability);
         rigidBody.AddForce(rigidBody.linearVelocity * -1, ForceMode2D.Impulse);
         rigidBody.gravityScale = 0;
-        rigidBody.AddForce(Vector2.right * GameParameters.dashForce, ForceMode2D.Impulse);
+        if (direction.isFacingRight)
+        {
+            rigidBody.AddForce(Vector2.right * GameParameters.dashForce, ForceMode2D.Impulse);
+        }
+        else
+        {
+            rigidBody.AddForce(Vector2.right * GameParameters.dashForce * -1, ForceMode2D.Impulse);
+        }
+        
         StartCoroutine(DashTime());
         StartCoroutine(Cooldown());
 
