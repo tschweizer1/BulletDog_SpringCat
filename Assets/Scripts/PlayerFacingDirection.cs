@@ -14,7 +14,7 @@ public class PlayerFacingDirection : MonoBehaviour
     private void Update()
     {
         Vector2 movement = rigidBody.linearVelocity;
-        if (isFacingRight && movement.x < 0f || !isFacingRight && movement.x > 0f)
+        if (isFacingRight && movement.x < -0.1f || !isFacingRight && movement.x > 0.1f)
         {
             isFacingRight = !isFacingRight;
             Vector3 ls = transform.localScale;
