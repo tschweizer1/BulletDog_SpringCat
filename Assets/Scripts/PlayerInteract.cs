@@ -9,14 +9,17 @@ public class PlayerInteract : MonoBehaviour
 
     private void Awake()
     {
-        InteractableCollider =  GameObject.Find("InteractableCollider").GetComponent<BoxCollider2D>();
+        print("awake");
+        InteractableCollider = null;
         InteractableLayers =  LayerMask.GetMask("Interactable");
     }
     
     public Collider2D IsInteractablePresent()
     {
-        
-    
+        if (InteractableCollider == null)
+        {
+            InteractableCollider =  GameObject.Find("InteractableCollider").GetComponent<BoxCollider2D>();
+        }
         return Physics2D.OverlapBox(
             InteractableCollider.bounds.max,   // top of the box in world space
             InteractableCollider.size,     // width and height of the box
