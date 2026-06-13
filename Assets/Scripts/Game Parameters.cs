@@ -11,4 +11,7 @@ public static class GameParameters
     
     //Character Ability Parameters
     public static float dashForce = 50.0f;
+    public static float dashCooldown = 1.0f;
+    public static float springJumpForce = 10.0f;
+    public static float springJumpCooldown = 2.0f;
 }

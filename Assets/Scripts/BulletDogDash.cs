@@ -50,7 +50,7 @@ public class BulletDogDash : MonoBehaviour
 
     private IEnumerator Cooldown()
     {
-        yield return new WaitForSeconds(GameParameters.dashForce * 0.02f);
+        yield return new WaitForSeconds(GameParameters.dashCooldown);
         abilityOnCooldown = false;
     }
 }
